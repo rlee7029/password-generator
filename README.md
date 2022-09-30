@@ -1,6 +1,6 @@
 # password
 
-! [alt text](.assets/images/IMG1.JPEG))
+![alt text](.assets/images/IMG1.JPEG))
 
 ## Techonlogies Used
 During this project. I used the following techonlogies 
