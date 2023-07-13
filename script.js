@@ -1,85 +1,56 @@
 
 var generateBtn = document.querySelector("#generate");
 
-var passwordLength;
-var symbols;
-var numbers; 
-var uppercase; 
-var lowercase; 
-
-// the chars that we will use for password//
-var sym = ["!@#$%^&*()_+"];
-var num = ["1234567890"];
-var upper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-var lower = ["abcdefghijklmnopqrstuvwxyz"];
-
-
 
 function generatePassword() {
 
-  var password = "";
-  var passwordChar = "";
-  while (true) {
-    passwordLength = parseInt(prompt("choose length of the password from 1-128"));
-    if (passwordLength >= 8 && passwordLength <= 128) {
-      break;
-    }
-    alert("Please select a number between 8 - 128");
-  }
 
-  // setting cofrim for to show the user which one they want to choose//
-  symbols = confirm("Ok for Symbols");
-  numbers = confirm("OK for numbers");
-  uppercase = confirm("OK for uppercase");
-  lowercase = confirm("OK for lowercase");
-
-// this if and else if will able to mix and match the password regadrting what user selects// 
-  if (symbols) {
-    passwordChar = sym;
-  } else if (numbers) {
-    passwordChar = num;
-  } else if (uppercase) {
-    passwordChar = upper;
-  } else if (lowercase) {
-    passwordChar = lower;
-  } else if (symbols && uppercase) {
-    passwordChar = sym += upper;
-  } else if (symbols && lowercase) {
-    passwordChar = sym += lower;
-  } else if (symbols && numbers) {
-    passwordChar = sym += num;
-  } else if (numbers && uppercase) {
-    passwordChar = num += upper;
-  } else if (numbers && lowercase) {
-    passwordChar = num += lower;
-  } else if (symbols && numbers && uppercase) {
-    passwordChar = sym += num += upper;
-  } else if (uppercase && lowercase) {
-    passwordChar = upper += lower; 
-  } else if (symbols && uppercase && lowercase) {
-    passwordChar = sym += upper += lower;
-  } else if (lowercase && numbers && uppercase) {
-    passwordChar = lower += num += upper;
-  } else if (symbols && numbers && uppercase && lowercase) {
-    passwordChar = sym += num += upper += lower;
-  } else if (!symbols && !numbers && !uppercase && !lowercase)
-        alert("Have to select one!")
-    
-
-
-    for (var i = 0; i < passwordLength; i++) {
-      var password = passwordChar[Math.floor(Math.random() * passwordChar.length)]
-    }
+  var upCase= ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var loCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",  "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var numList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  var specialCharacters = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
+   
+  var userValue = [];
+  var equalsValue = [];
   
-    return (password);
+upCase [1]
+
+  var promptCharacter = prompt ("Between 8 and 128, how many characters do you want your password to be?");
+  var numbers = confirm ("Do you want numbers in your password?");
+  var upCase = confirm ("Do you want uppercases in your password?");
+  var loCase = confirm ("Do you want lowercases in your password?");
+  var characters = confirm ("Do you want special characters in your password?");
+
+
+if (numbers){
+  equalsValue = equalsValue.concat(numbersList); 
 }
 
+if (upCase){
+  equalsValue = equalsValue.concat(upperCase);
+}
+
+if (loCase){
+  equalsValue = equalsValue.concat(lowerCase);
+}
+
+if (characters){
+  equalsValue = equalsValue.concat(specialCharacters);
+}
+console.log(equalsValue);
+
+//Added for-loop to run over array
+
+for (var i = 0; i < promptCharacter; i++) {   
+  userValue.push (equalsValue[Math.floor(Math.random() * equalsValue.length)]); 
+  }
+  return userValue.join("") ;
+}
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password
+  passwordText.value = password;
 
 }
 generateBtn.addEventListener("click", writePassword);
-
