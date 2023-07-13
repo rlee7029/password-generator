@@ -39,7 +39,6 @@ if (characters){
 }
 console.log(equalsValue);
 
-//Added for-loop to run over array
 
 for (var i = 0; i < promptCharacter; i++) {   
   userValue.push (equalsValue[Math.floor(Math.random() * equalsValue.length)]); 
