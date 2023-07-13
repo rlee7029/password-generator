@@ -1,11 +1,9 @@
-// Assignment Code
+
 var generateBtn = document.querySelector("#generate");
 
-// Define generatePassword
-// Identified that a value needs to be returned 
-// Pseudo coding to construct code that meets ReadMe requirements
 
 function generatePassword() {
+
 
 
   var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -42,6 +40,7 @@ if (characters){
 console.log(equalsValue);
 
 
+
 for (var i = 0; i < promptCharacter; i++) {   
   userValue.push (equalsValue[Math.floor(Math.random() * equalsValue.length)]); 
   }
@@ -55,4 +54,5 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
 generateBtn.addEventListener("click", writePassword);
