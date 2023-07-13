@@ -23,15 +23,15 @@ upCase [1]
 
 
 if (numbers){
-  equalsValue = equalsValue.concat(numbersList); 
+  equalsValue = equalsValue.concat(numList); 
 }
 
 if (upCase){
-  equalsValue = equalsValue.concat(upperCase);
+  equalsValue = equalsValue.concat(upCase);
 }
 
 if (loCase){
-  equalsValue = equalsValue.concat(lowerCase);
+  equalsValue = equalsValue.concat(loCase);
 }
 
 if (characters){
