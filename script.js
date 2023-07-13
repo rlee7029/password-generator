@@ -15,11 +15,11 @@ function generatePassword() {
   
 upCase [1]
 
-  var promptCharacter = prompt ("Between 8 and 128, how many characters do you want your password to be?");
-  var numbers = confirm ("Do you want numbers in your password?");
-  var upCase = confirm ("Do you want uppercases in your password?");
-  var loCase = confirm ("Do you want lowercases in your password?");
-  var characters = confirm ("Do you want special characters in your password?");
+  var promptCharacter = prompt ("Between 8 and 128, choose your password length with using numbers, uppercase, lowercase letters and speical charcters?");
+  var numbers = confirm ("Numbers?");
+  var upCase = confirm ("Uppercase Letters?");
+  var loCase = confirm ("Lowercase Letters?");
+  var characters = confirm ("Special Charcters?");
 
 
 if (numbers){
