@@ -16,11 +16,11 @@ function generatePassword() {
   
   upperCase [1]
 
-  var promptCharacter = prompt ("Between 8 and 128, how many characters do you want your password to be?");
-  var numbers = confirm ("Do you want numbers in your password?");
-  var uppercases = confirm ("Do you want uppercases in your password?");
-  var lowercases = confirm ("Do you want lowercases in your password?");
-  var characters = confirm ("Do you want special characters in your password?");
+  var promptCharacter = prompt ("Between 8 and 128, choose if you want numbers, upper or lower case letter, and speical characters?");
+  var numbers = confirm ("Numbers?");
+  var uppercases = confirm ("Upper Case Letters?");
+  var lowercases = confirm ("Lower Case Letters?");
+  var characters = confirm ("Special Character?");
 
 if (numbers){
   equalsValue = equalsValue.concat(numbersList); 
