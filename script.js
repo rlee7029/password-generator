@@ -17,8 +17,8 @@ upCase [1]
 
   var promptCharacter = prompt ("Between 8 and 128, choose your password length with using numbers, uppercase, lowercase letters and speical charcters?");
   var numbers = confirm ("Numbers?");
-  var upCase = confirm ("Uppercase Letters?");
-  var loCase = confirm ("Lowercase Letters?");
+  var upperCase = confirm ("Uppercase Letters?");
+  var lowerCase = confirm ("Lowercase Letters?");
   var characters = confirm ("Special Charcters?");
 
 
@@ -26,11 +26,11 @@ if (numbers){
   equalsValue = equalsValue.concat(numList); 
 }
 
-if (upCase){
+if (upperCase){
   equalsValue = equalsValue.concat(upCase);
 }
 
-if (loCase){
+if (lowerCase){
   equalsValue = equalsValue.concat(loCase);
 }
 
