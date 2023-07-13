@@ -1,37 +1,39 @@
-
+// Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Define generatePassword
+// Identified that a value needs to be returned 
+// Pseudo coding to construct code that meets ReadMe requirements
 
 function generatePassword() {
 
 
-  var upCase= ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-  var loCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",  "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  var numList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",  "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var numbersList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var specialCharacters = ["@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+"];
    
   var userValue = [];
   var equalsValue = [];
   
-upCase [1]
+  upperCase [1]
 
-  var promptCharacter = prompt ("Between 8 and 128, choose your password length with using numbers, uppercase, lowercase letters and speical charcters?");
-  var numbers = confirm ("Numbers?");
-  var upperCase = confirm ("Uppercase Letters?");
-  var lowerCase = confirm ("Lowercase Letters?");
-  var characters = confirm ("Special Charcters?");
-
+  var promptCharacter = prompt ("Between 8 and 128, how many characters do you want your password to be?");
+  var numbers = confirm ("Do you want numbers in your password?");
+  var uppercases = confirm ("Do you want uppercases in your password?");
+  var lowercases = confirm ("Do you want lowercases in your password?");
+  var characters = confirm ("Do you want special characters in your password?");
 
 if (numbers){
-  equalsValue = equalsValue.concat(numList); 
+  equalsValue = equalsValue.concat(numbersList); 
 }
 
-if (upperCase){
-  equalsValue = equalsValue.concat(upCase);
+if (uppercases){
+  equalsValue = equalsValue.concat(upperCase);
 }
 
-if (lowerCase){
-  equalsValue = equalsValue.concat(loCase);
+if (lowercases){
+  equalsValue = equalsValue.concat(lowerCase);
 }
 
 if (characters){
@@ -45,6 +47,7 @@ for (var i = 0; i < promptCharacter; i++) {
   }
   return userValue.join("") ;
 }
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
